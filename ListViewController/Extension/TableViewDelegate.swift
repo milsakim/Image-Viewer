@@ -31,7 +31,30 @@ extension ListViewController: UITableViewDelegate {
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        print("--- scrollViewWillBeginDragging ---")
+//        print("--- scrollViewWillBeginDragging ---")
+//        print("--- scrollView contentOffset: \(scrollView.contentOffset) ---")
+//        print("--- tableView contentSize: \(tableView.contentSize) ---")
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        print("scrollView contentOffset: \(scrollView.contentOffset)")
+//        print("scrollView contentSize: \(scrollView.contentSize)")
+//        print("scrollVoew frame: \(scrollView.frame)\n\n")
+        
+        let offsetY = scrollView.contentOffset.y
+        let contentSizeHeight = scrollView.contentSize.height
+        let frameHeight = scrollView.frame.height
+        
+        if offsetY >= (contentSizeHeight - frameHeight) {
+            if !isFetchingData {
+                isFetchingData = true
+                tableView.reloadSections(IndexSet(integer: 1), with: .none)
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    self.generatePostData(number: 10)
+                }
+            }
+        }
     }
     
 }
