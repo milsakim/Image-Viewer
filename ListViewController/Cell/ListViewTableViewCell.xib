@@ -23,8 +23,8 @@
                             <constraint firstAttribute="width" constant="100" id="6qA-7z-973"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yve-aJ-hxA">
-                        <rect key="frame" x="128" y="20" width="257" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Yve-aJ-hxA">
+                        <rect key="frame" x="128" y="20" width="257" height="100"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -35,6 +35,7 @@
                     <constraint firstItem="n83-7u-UeS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="RRw-a2-hhV"/>
                     <constraint firstItem="Yve-aJ-hxA" firstAttribute="leading" secondItem="n83-7u-UeS" secondAttribute="trailing" constant="8" symbolic="YES" id="VyG-az-6mX"/>
                     <constraint firstItem="n83-7u-UeS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Wll-4Y-WT5"/>
+                    <constraint firstItem="Yve-aJ-hxA" firstAttribute="bottom" secondItem="n83-7u-UeS" secondAttribute="bottom" id="l1c-E2-OoJ"/>
                     <constraint firstItem="Yve-aJ-hxA" firstAttribute="top" secondItem="n83-7u-UeS" secondAttribute="top" id="pOi-1D-LeH"/>
                     <constraint firstAttribute="trailing" secondItem="Yve-aJ-hxA" secondAttribute="trailing" constant="20" symbolic="YES" id="uPa-hW-4KR"/>
                 </constraints>
