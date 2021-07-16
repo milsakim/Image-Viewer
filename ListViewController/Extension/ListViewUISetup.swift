@@ -13,7 +13,7 @@ extension ListViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: ListViewTableViewCell.id, bundle: .main), forCellReuseIdentifier: ListViewTableViewCell.id)
-        tableView.estimatedRowHeight = 140
+        tableView.register(UINib(nibName: LoadingTableViewCell.id, bundle: .main), forCellReuseIdentifier: LoadingTableViewCell.id)
     }
     
 }
