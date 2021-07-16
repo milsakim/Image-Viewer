@@ -17,6 +17,8 @@ class ListViewController: UIViewController {
     
     let imageCache: NSCache<NSNumber, UIImage> = NSCache()
     
+    var isFetchingData: Bool = false
+    
     // MARK: Deinit
     
     deinit {
@@ -37,7 +39,7 @@ class ListViewController: UIViewController {
     
     func commonInit() {
         setupTableView()
-        generatePostData(number: 50)
+        generatePostData(number: 10)
         // tableView.reloadData()
     }
     
@@ -51,10 +53,13 @@ class ListViewController: UIViewController {
         if posts != nil {
             let baseTitle = "This is image number "
             
-            for i in 1...number {
+            for i in posts!.count...(posts!.count + number) {
                 posts!.append(Post(id: i, image: "https://picsum.photos/200", title: baseTitle + String(i)))
             }
         }
+        
+        tableView.reloadData()
+        isFetchingData = false
     }
 
 }
